@@ -1,69 +1,31 @@
+#### 说明
 
+- 本项目为使用webmagic搭建的一个koe网站内容爬取工具
 
-- 基础框架：Spring Boot 2.0.3.RELEASE
+#### 用法
 
-- 持久层框架：Mybatis 3.4.5
-
-- 安全框架：Apache Shiro 1.4.0
-
-- 摸板引擎：Thymeleaf 3.0.9.RELEASE
-
-- 数据库连接池：阿里巴巴Druid 1.1.10
-
-- 缓存框架：Redis
-
-- 日志打印：logback
-
-- 其他：fastjson，poi，javacsv，quartz等。
-
-#### 前端
- 
-- 基础框架：Bootstrap 4
-
-- JavaScript框架：jQuery
-
-- 消息组件：Bootstrap notify
-
-- 提示框插件：SweetAlert2
-
-- 树形插件：jsTree
-
-- 树形表格插件：jqTreeGrid
-
-- 表格插件：BootstrapTable
-
-- 表单校验插件：jQuery-validate
-
-- 多选下拉框插件：multiple-select
-
-- 图表插件：Highcharts
-
-- 时间插件：daterangepicker
+- 编译本项目
+- 配置数据库
+- 运行 java -jar 编译jar包名.jar
+- 程序会自动开始下载，下载目录为 D:/audio/
+- 访问 http://localhost:9090/koe/info 查看详细下载信息
 
 #### 开发环境
 
 - 语言：Java 8
 
-- IDE：Eclipse Oxygen & IDEA 2018.1.4(Ultimate Edition)
+- 基础框架：Spring Boot
+
+- 持久层框架：Jpa
+
+- IDE：IDEA
 
 - 依赖管理：Maven
 
-- 数据库：Oracle 11g & MySQL5.7
+- 数据库：MySQL5.5
 
 - 版本管理：SVN，git
 
-## 系统预览
- 
-
-
-### 开发与部署
-
-码云地址： https://gitee.com/github-16661027/project 
-
-GitHub 地址： https://github.com/wuyouzhuguli/FEBS
-
-下载后以Maven项目的方式导入Eclipse或者IDEA。
-
-开发时直接使用Spring Boot的入口类`cc.mrbird.Application`启动即可，访问地址[localhost:8080](localhost:8080)，账号mrbird，密码123456。
-
-部署时，使用Maven将项目打包成febs.jar，然后使用命令`java -jar febs.jar`启动即可。在Linux下部署Spring Boot jar，并编写启停脚本可参考链接[https://mrbird.cc/Linux%20Spring-Boot-jar.html](https://mrbird.cc/Linux%20Spring-Boot-jar.html)。
+#### ps
+- webmagic用来提取网页内容还是挺方便的，支持的提取规则多（xpath, selecter等），在Chrome里可以方便获取这2种规则。同时支持多线程，超时，重试，持久化内容等功能，可能这里只用到了不多webmagic的功能。
+- python 还是比较适合用来写爬虫，代码精简，不用搭建复杂的运行环境，占用系统资源小，开发迅速

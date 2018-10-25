@@ -26,7 +26,7 @@ import static cn.it.koe_spider.util.DownLoad.waitForDown;
 @RequestMapping("koe")
 public class KoeController {
 
-    private static Boolean quick = false;
+    private static Boolean quick = true;
     private static Boolean daily = false;
     private final String newLine = System.getProperty("line.separator");
     @Autowired
@@ -101,7 +101,7 @@ public class KoeController {
         this.scheduler = scheduler;
         this.spider = spider;
         spider.run();
-        //down();
+        down();
     }
 
     @RequestMapping("/param")
